@@ -7,8 +7,8 @@ body {
   }
   
 #main-container {
-  background-color: blue;
-  margin-top: 280px;
+  background-color:whitesmoke;
+  margin-top: 300px;
   width: 900px;
   height: 400px;
   margin: 300 auto 0 auto;
@@ -23,10 +23,10 @@ body {
     width: 495px;
     height: 267px;
     background: #fff;
-    border: 2px solid red;
+    
   }
   
- img{
+ /*img{
   content: "";
   background: transpare scroll no-repeat 0 0;
   background-size: cover;
@@ -36,17 +36,47 @@ body {
   /* position: absolute;
   display: block;
   top: 50px;
-  left: 50px; */
-}
+  left: 50px; 
+ }*/
 
 
- 
- 
-  
-  
   h1{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
     color: Red;
   }
   
+.timer-p{
+  margin-top: 40px;
+}
+
+.answer:hover { 
+  background: blueviolet;
+}
+
+.answer {
+  padding-top: 7px;
+  height: 45px;
+  color: black;
+  padding-left: 14px;
+  background-color: white;
+  border-radius: 4px;
+}
+
+.first-answer {
+  margin-top: 40px;
+}
+
+.reset-button {
+  margin-top: 40px;
+}
+
+.summarty-correct {
+  margin-top: 40px;
+}
+
+
+
+
+
+
