@@ -45,9 +45,5 @@ const quizQuestions = [
         question:"What is the name of the coffee house?",
         choices: ["Coffee Perk", "Park Perk", "Left Perk", "Central Perk"],
         correctAnswer: "Central Perk",
-       // image: "https://media0.giphy.com/media/6KoHLujBN4QWk/giphy.gif?cid=790b76111be05a030d39cbc0194c8245ebb168e7d5918d05&rid=giphy.gif",
     }
-    
-    
-    
-    
+]

@@ -1,17 +1,18 @@
 var counter = 10;
-var currentQuestion =0;
+var currentQuestion = 0;
 var score = 0;
 var lost = 0;
 var timer;
 
 function nextQuestion() {
   counter = 10;
+  clearInterval(timer);
   timer = setInterval(countDown, 1000);
 
   const isQuestionOver = (quizQuestions.length - 1) === currentQuestion;
   if(isQuestionOver){
     console.log('Game Over!!!');
-    displayResults();
+    displayResult();
   }
   else{
     currentQuestion++;
@@ -26,7 +27,8 @@ function timeUp(){
   clearInterval(timer);
 
   lost++;
-  setTimeout(nextQuestion, 10 * 1000);
+
+  setTimeout(nextQuestion, 2 * 1000);
 }
 
 function countDown(){
@@ -48,27 +50,28 @@ function loadChoices(choices){
   var result = '';
 
   for(var i = 0; i < choices.length; i++) {
-    result += `<p class="choice" data-answer="${choices[i]}">${choices[i]}</p>`
-  }
+    result += `<p class="choice" data-answer="${choices[i]}">${choices[i]}</p>
+`}
   return result;
 }
 
 function loadQuestion() {
   counter = 10;
-  timer = setInterval(countDown(), 1000);
+  clearInterval(timer);
+  timer = setInterval(countDown, 1000);
   console.log("below are the quiz questions -----------")
-  console.log(quizQuestions)
+  //console.log(quizQuestions)
   const question = quizQuestions[currentQuestion].question;
   const choices = quizQuestions[currentQuestion].choices;
 
-  $("#time").html("Timer: " + counter);
-  $("#game").html(`<h4>${question}</h4>      
+  $('#time').html('Timer: ' + counter);
+  $('#game').html(`<h4>${question}</h4>      
     ${loadChoices(choices)}
   
   `);
 }
 
-// ${loadRemainingQuestion()}
+
 
 $(document).on('click', '.choice', function() {
   clearInterval(timer);
@@ -79,13 +82,13 @@ $(document).on('click', '.choice', function() {
     score++;
     console.log('Win');
     //preloadImage();
-    setTimeout(nextQuestion, 8 * 1000);
+    setTimeout(nextQuestion, 2 * 1000);
   }
   else {
     lost++;
     console.log('Lost');
     //preloadImage();
-    setTimeout(nextQuestion, 8 * 1000);
+    setTimeout(nextQuestion, 2 * 1000);
   }
 });
 
@@ -96,7 +99,7 @@ function displayResult() {
   <p>Total questions ${quizQuestions.length} question right</p>
   <button class="btn btn-primary" id="reset">Reset Game</button>`
   
-  $('$game').html(result);
+  $('#game').html(result);
 }
 
 
@@ -112,15 +115,17 @@ $(document).on('click', '#reset', function(){
 
 
 
-function preloadImage(status) {
-  const correctAnswer = quizQuestions[currentQuestion].correctAnswer;
-  if(status === 'win') {
-    $('#game').html(`
-    <p class="preload-image">The correct answer is <b>${correctAnswer}</b></p>
-    <img src="${correctAnswer}" />
-    `)
-  }
-}
+//function preloadImage(status) {
+  //const correctAnswer = quizQuestions[currentQuestion].correctAnswer;
+ // if(status === 'win') {
+  //  $('#game').html(`
+ //   <p class="preload-image">The correct answer is <b>${correctAnswer}</b></p>
+ //   <img src="${correctAnswer}" />
+ //   `)
+//  }
+//}
+
+
 
 $('#start').click(function(){
   $('#start').remove();

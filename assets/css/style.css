@@ -6,80 +6,25 @@ body {
     
   }
   
-
-
-
-#main-container {
-  background-color:whitesmoke;
-  margin-top: 300px;
-  width: 900px;
-  height: 400px;
-  margin: 300 auto 0 auto;
-  position: absolute;
-  text-align: center;
-  
-  
-}
-
-  .main-container {
-    
-    width: 495px;
-    height: 267px;
-    background: #fff;
+  .choice {
+    border: 1px solid blueviolet;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: powderblue;
     
   }
   
- /*img{
-  content: "";
-  background: transpare scroll no-repeat 0 0;
-  background-size: cover;
-  width: 150px;
-  height: 150px;
-  margin: 0 auto;
-  /* position: absolute;
-  display: block;
-  top: 50px;
-  left: 50px; 
- }*/
-
-
   h1{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    color: Red;
-  }
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 40px;
+      color: purple;
+    }
   
-.timer-p{
-  margin-top: 40px;
-}
-
-.answer:hover { 
-  background: blueviolet;
-}
-
-.answer {
-  padding-top: 7px;
-  height: 45px;
-  color: black;
-  padding-left: 14px;
-  background-color: white;
-  border-radius: 4px;
-}
-
-.first-answer {
-  margin-top: 40px;
-}
-
-.reset-button {
-  margin-top: 40px;
-}
-
-.summary-correct {
-  margin-top: 40px;
-}
-
-
-
-
+  #empty {
+    height: 300px;
+    
+  
+  }
 
 
