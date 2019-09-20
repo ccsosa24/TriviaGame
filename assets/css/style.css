@@ -12,19 +12,29 @@ body {
     border-radius: 4px;
     cursor: pointer;
     background-color: powderblue;
+    color: blue;
     
   }
   
   h1{
       font-family: Arial, Helvetica, sans-serif;
       font-size: 40px;
-      color: purple;
+      color: darkmagenta;
     }
   
   #empty {
     height: 300px;
     
-  
   }
 
+.jumbotron {
+    background-image: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/hb-friends-couch-1-1529331692.jpg");
+  }
+#time {
+  color: whitesmoke;
+}
+
+#game {
+  color: whitesmoke
+}
 
