@@ -93,6 +93,7 @@ $(document).on('click', '.choice', function() {
 });
 
 function displayResult() {
+ clearInterval(timer);
   const result = `
   <p>You have ${score} questions right</p>
   <p>You missed ${lost} questions</p>
